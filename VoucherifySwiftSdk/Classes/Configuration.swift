@@ -43,8 +43,8 @@ public struct Configuration {
 
 public struct HttpHeader {
 	static let httpHeaderContentType = "Content-Type"
-	static let httpHeaderClientId = "X-Client-Application-Id"
-	static let httpHeaderClientToken = "X-Client-Token"
+	static let httpHeaderClientId = "X-App-Id"
+	static let httpHeaderClientToken = "X-App-Token"
 	static let httpHeaderOrigin = "origin"
 	static let httpHeaderChannel = "X-Voucherify-Channel"
 }
