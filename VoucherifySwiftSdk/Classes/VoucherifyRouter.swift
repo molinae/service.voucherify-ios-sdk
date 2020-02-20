@@ -36,17 +36,17 @@ public enum VoucherifyRouter: URLRequestConvertible {
     var route: (path: String, parameters: [String: Any]?) {
         switch self {
         case .listVouchers(let parameters):
-            return ("/v1/vouchers", parameters);
+            return ("/client/v1/vouchers", parameters);
         case .listPromotionsTiers(let parameters):
-            return ("/v1/promotions/tiers", parameters);
+            return ("/client/v1/promotions/tiers", parameters);
         case .validateVoucher(let parameters):
-            return ("/v1/validate", parameters);
+            return ("/client/v1/validate", parameters);
         case .validatePromotions(let parameters, _):
-            return ("/v1/promotions/validation", parameters)
+            return ("/client/v1/promotions/validation", parameters)
         case .redeemVoucher(let parameters, _):
-            return ("/v1/redeem", parameters)
+            return ("/client/v1/redeem", parameters)
         case let .redeemPromotion(parameters, promotionTierId, _):
-            return ("/v1/promotions/tiers/\(promotionTierId)/redemption", parameters)
+            return ("/client/v1/promotions/tiers/\(promotionTierId)/redemption", parameters)
         }
     }
     
